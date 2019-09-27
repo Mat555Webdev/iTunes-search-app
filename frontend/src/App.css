@@ -1,0 +1,188 @@
+.App {
+  text-align: center;
+  font-style: italic;
+}
+*{
+  background-color: whitesmoke;
+}
+input {
+  border: 1px solid black;
+  width: 70%;
+  height: 7.5vh;
+  margin-right: 0.3%;
+  border-radius: 3px;
+  border: 2px solid rgb(28, 73, 110);
+  color: rgb(50, 114, 231);
+  font-size: 150%;
+}
+select {
+  border: 2px solid rgb(28, 73, 110);
+  color: rgb(50, 114, 231);
+  margin-bottom: 1%;
+  text-align: center;
+  padding: 0%;
+  height: 6vh;
+  font-size: 120%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 3px;
+  text-decoration-style: double;
+  cursor: pointer;
+}
+#searchbtn {
+  border: 1px dotted rgb(22, 187, 209);
+  background-color: rgb(22, 187, 209);
+  color: whitesmoke;
+  height: 6.5vh;
+  cursor: pointer;
+  border-radius: 3px;
+}
+#searchbtn:hover{
+  color:black
+}
+.addtofavbtn {
+  border: 1px dotted black;
+  border-radius: 5px;
+  margin: 3%;
+  background-color: rgb(50, 114, 231);
+  cursor: pointer;
+  position: absolute;
+  margin-right: 3%;
+  margin-left: 90%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  height: 8%;
+}
+.addtofavbtn:hover{
+  color:white
+}
+h1 {
+  color: rgb(50, 114, 231);
+}
+form {
+  margin-top: 0%;
+}
+p {
+  color: rgb(50, 114, 231);
+  text-decoration: none;
+  font-style: italic;
+  font-size: 160%;
+  text-align: left;
+  margin-left: 12.7%;
+}
+.searchitems {
+  border: dotted 1px black;
+  border-radius: 5px;
+  margin: 1%;
+  font-size: 80%;
+}
+.favitems {
+  margin-left: 12%;
+  border: dotted 1px black;
+  border-radius: 5px;
+  width: 80vw;
+  margin-bottom: 1%;
+  font-size: 80%;
+}
+.favname {
+  margin-left: 1%;
+}
+.favtitle {
+  margin-left: 1%;
+  color: rgb(15, 98, 29);
+}
+#deletefav{
+  border: 1px dotted black;
+  border-radius: 5px;
+  margin: 3%;
+  background-color: rgb(216, 55, 55);
+  cursor: pointer;
+  position: absolute;
+  margin-right: 5%;
+  margin-left: 76%;
+  margin-top: 0.8%;
+  height: 7%;
+  width:3%;
+  font-size: 130%;
+  font-style: oblique
+}
+#deletefav:hover{
+  color:white
+}
+.ituneslink{
+  margin-top: 0%;
+  width: 33px;
+  color:purple;
+  display: flex;
+  flex-direction: unset
+}
+.ituneslink:hover{
+  color:black;
+  font-size: 115%;
+}
+.itemName{
+  margin-left: 0.3%
+}
+.itemTitle{
+  margin-left: 1%; margin-right: 10%; color: black 
+}
+@media (max-width: 800px) {
+  .addtofavbtn {
+    border: 1px dotted black;
+    border-radius: 5px;
+    margin: 3%;
+    background-color: rgb(50, 114, 231);
+    cursor: pointer;
+    position: absolute;
+    height: 5%;
+    margin-top: 5%
+  }
+  .itemName{
+    margin-left: 15%
+  }
+  .itemTitle{
+    margin-left: 1%; margin-right: 10%; color: black 
+  }
+  #deletefav{
+    border: 1px dotted black;
+    border-radius: 5px;
+    margin: 3%;
+    background-color: rgb(216, 55, 55);
+    cursor: pointer;
+    position: absolute;
+    height: 7%;
+    width:6%;
+    font-size: 100%;
+    font-style: oblique;
+    margin-top: 0%;
+    margin-left: 70%;
+    margin-right: 0%;
+  }
+}
+@media (max-width: 500px){
+  .itemName{
+    margin-left: 20%
+  }
+  #deletefav{
+    border: 1px dotted black;
+    border-radius: 5px;
+    margin: 3%;
+    background-color: rgb(216, 55, 55);
+    cursor: pointer;
+    position: absolute;
+    height: 7%;
+    width:6%;
+    font-size: 100%;
+    font-style: oblique;
+    margin-top: 0%;
+    margin-left: 70%
+  }
+}
+@media (max-width: 450px){
+  #deletefav{
+    margin-left: 70%;
+    width:10%;
+    margin-top: 2%;
+  }
+
+}
