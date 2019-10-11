@@ -23,7 +23,7 @@ How to use the app:
 1. Navigate to the home page of the app
 
 2. Type in your search, then click on the search
-   button.3
+   button.
 
 3. You can navigate to itunes for your specified item
    or you can add it to your favourites.
@@ -36,5 +36,6 @@ Security:
 Seeing that there is no authentication at this point, the default security 
 for Helmet.js was used on the app.
 
+Please note this app was intended for use on Desktop machines
 
 
