@@ -1,3 +1,5 @@
+ASSUMING THAT YOU HAVE NODE.JS INSTALLED LOCALLY...
+
 ************type npm install in the root directory.
 ************type npm install in the frontend directory
 
