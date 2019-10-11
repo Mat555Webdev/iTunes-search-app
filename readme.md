@@ -36,6 +36,5 @@ Security:
 Seeing that there is no authentication at this point, the default security 
 for Helmet.js was used on the app.
 
-Link to app: https://pacific-plains-18477.herokuapp.com/
 
 
