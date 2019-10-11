@@ -2,7 +2,7 @@
 ************type npm install in the frontend directory
 
 After downloading this repository to your local machine, 
-and installing using npm the packages, do the following: 
+and installing using npm packages, do the following: 
 
 How to install and use on local machine:
 
