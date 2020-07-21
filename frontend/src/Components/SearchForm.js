@@ -1,6 +1,13 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import SearchResults from "./SearchResults";
+import {
+  Button,
+  InputGroup,
+  InputGroupAddon,
+  Input,
+  Breadcrumb,
+  BreadcrumbItem,
+} from "reactstrap";
 
 class SearchForm extends Component {
   constructor(props) {
@@ -11,50 +18,53 @@ class SearchForm extends Component {
     this.state = {
       media: "all",
       searchFor: "",
-      searchResults: []
+      searchResults: [],
     };
   }
   //below code will change the state of this component
   //based on what the user wants to search
   mediaonChange(e) {
     this.setState({
-      media: e.target.value
+      media: e.target.value,
     });
   }
   searchonChange(e) {
     this.setState({
-      searchFor: e.target.value
+      searchFor: e.target.value,
     });
   }
   //below code will fetch data from express server
   //when the user clicks search
-  fetchSearchResults(e){
+  fetchSearchResults(e) {
     e.preventDefault();
-    fetch('/search', {
+    fetch("/search", {
       method: "POST",
-      headers: {"Content-Type" : "application/json"},
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         //data below is gonna be accessed by the server
-        //which is going to specify the media type and 
+        //which is going to specify the media type and
         //what needs to be searched.
         media: this.state.media,
-        searchFor: this.state.searchFor
-      })
+        searchFor: this.state.searchFor,
+      }),
     })
-    .then(res => res.json())
-    .then(result => {
-      this.setState({
-        searchResults: result
+      .then((res) => res.json())
+      .then((result) => {
+        this.setState({
+          searchResults: result,
+        });
       })
-    })
-    .catch(error => alert("Server is currently down"))
+      .catch((error) => alert("Server is currently down"));
   }
   render() {
     return (
       <div>
-        <Link to="/fav">
-          <p>Favourites</p>
-        </Link>
+        <Breadcrumb>
+          <BreadcrumbItem active>Home</BreadcrumbItem>
+          <BreadcrumbItem>
+            <a href="/fav">Favourites</a>
+          </BreadcrumbItem>
+        </Breadcrumb>
         <form onSubmit={this.fetchSearchResults}>
           <select onChange={this.mediaonChange}>
             <option>all</option>
@@ -69,10 +79,14 @@ class SearchForm extends Component {
             <option>ebook</option>
           </select>
           <br />
-          <input required onChange={this.searchonChange} type="text" />
-          <button id="searchbtn">Search</button>
+          <InputGroup>
+            <Input required onChange={this.searchonChange} type="text" />
+            <InputGroupAddon addonType="append">
+              <Button color="info">Search</Button>
+            </InputGroupAddon>
+          </InputGroup>
         </form>
-        <SearchResults results={this.state.searchResults}/>
+        <SearchResults results={this.state.searchResults} />
       </div>
     );
   }
