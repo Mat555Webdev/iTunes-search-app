@@ -22,7 +22,7 @@ const SearchResults = (props) => {
       let itemTitle = results.results[i].trackCensoredName;
       //pushed each loop in the array
       items.push(
-        <ListGroup key={uuid.v4()}>
+        <ListGroup style={{paddingBottom:"13px", paddingTop:"13px"}}  key={uuid.v4()}>
           <ListGroupItem key={uuid.v4()}>
             <ListGroupItemHeading>{itemTitle}</ListGroupItemHeading>
             <ListGroupItemText>{name}</ListGroupItemText>
@@ -94,7 +94,6 @@ const SearchResults = (props) => {
 
   return (
     <div>
-      <h1>SearchResults:</h1>
       {/* loop inserted into the DOM below */}
       {items}
     </div>
